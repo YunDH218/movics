@@ -1,0 +1,148 @@
+$bgColor: #111;
+$mainTextColor: #eee;
+$activatedTextColor: #c00;
+$poster-ratio: (445/300);
+
+body {
+  /* COMMON */
+  background-color: $bgColor;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: $mainTextColor;
+  img {
+    display: block;
+  }
+  a {
+      text-decoration: none;
+  }
+  .inner {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+  }
+  .title {
+    width: fit-content;
+    font: {
+      size: 24px;
+      weight: 700;
+    };
+    border-bottom: 2px solid #eee;
+  }
+
+  /* HEADER */
+  header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    >.inner {
+      height: 120px;
+      .logo {
+        position: absolute;
+        height: 65px;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        z-index: 9;
+      }
+      .submenu {
+        position: absolute;
+        height: 40px;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        z-index: 9;
+        ul.menu {
+          display: flex;
+          li {
+            margin-left: 15px;
+            a {
+              color: $mainTextColor;
+              font: {
+                weight: 700;
+                size: 24px;
+              }
+              &:hover {
+                color: $activatedTextColor;
+              }
+            }
+            &:nth-child(2) a {
+              color: $activatedTextColor
+            }
+          }
+        }
+      }
+    }
+    .main-menu {
+      display: none;
+      position: fixed;
+      height: 100%;
+      width: calc(5% + 20em);
+      top: 0;
+      bottom: 0;
+      right: calc(-1*(5% + 20em));
+      background-color: $bgColor;
+      z-index: 8;
+      .menu {
+        position: absolute;
+        top: 150px;
+        left: 50px;
+        .item {
+          margin-bottom: 20px;
+          a {
+            color: $mainTextColor;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    .menu-background {
+      display: none;
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      bottom: 0;
+      background-color: rgba($color: #eee, $alpha: 0.1);
+      opacity: 0;
+      z-index: 7;
+    }
+  }
+
+  /* REVIEW TOP */
+  .review-top {
+    margin-top: 150px;
+    .swiper-container {
+      width: 80%;
+      margin-top: 20px;
+      overflow: hidden;
+      .swiper-wrapper {
+        .swiper-slide {
+          .movie-poster {
+            width: 120px;
+            height: 120px * $poster-ratio;
+            background-color: #565656;
+          }
+          $url: "../images";
+          @for $i from 1 to 11 {
+            &:nth-child(#{$i}) .movie-poster{
+              background-image: url(#{$url}/movie_poster#{$i}.jpg);
+              background-position: center;
+              background-size: cover;
+            }
+          }
+          &.swiper-slide-active {
+            .movie-poster{
+              width: 200px;
+              height: 200px * $poster-ratio;
+              transition: .3s;
+            } 
+          }
+        }
+      }
+    }
+  }
+}

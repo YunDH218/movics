@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Movics" />
+  <meta property="og:title" content="Movics movie reviews" />
+  <meta property="og:image" content="./images/movics_seo.png" />
+  <!-- Favicon -->
+  <link rel="icon" href="./favicon.png" />
+  <!-- Reset css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+  <!-- Google Fonts Nanum Gothic -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- Google Material Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+  <link rel="stylesheet" href="./scss/main.scss" />
+  
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+  <script defer src="main.js"></script>
+  <title>Movics</title>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="inner">
+      <a href="/" class="logo">
+        <img src="./images/movics_logo.png" alt="MOVICS">
+      </a>
+      <div class="submenu">
+        <ul class="menu">
+          <li><a href="javascript:void(0)">로그인</a></li>
+          <li><a href="javascript:void(0)" class="btn_search">검색</a></li>
+          <li><a href="javascript:void(0)">장르</a></li>
+          <li><a href="javascript:void(0)" class="btn_menu">메뉴</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="main-menu">
+      <ul class="menu">
+        <li class="item"><a href="javascript:void(0)">마이페이지</a></li>
+        <li class="item"><a href="javascript:void(0)">공지사항</a></li>
+        <li class="item"><a href="javascript:void(0)">이벤트</a></li>
+        <li class="item"><a href="javascript:void(0)">자주 묻는 질문</a></li>
+        <li class="item"><a href="javascript:void(0)">고객센터</a></li>
+      </ul>
+    </div>
+    <div class="menu-background"></div>
+  </header>
+  <!-- REVIEW TOP -->
+  <section class="review-top">
+    <div class="inner">
+      <div class="title">
+        평론 100
+      </div>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><div class="movie-poster"></div></div>
+          <div class="swiper-slide"><div class="movie-poster"></div></div>
+          <div class="swiper-slide"><div class="movie-poster"></div></div>
+          <div class="swiper-slide"><div class="movie-poster"></div></div>
+          <div class="swiper-slide"><div class="movie-poster"></div></div>
+          <div class="swiper-slide"><div class="movie-poster"></div></div>
+          <div class="swiper-slide"><div class="movie-poster"></div></div>
+          <div class="swiper-slide"><div class="movie-poster"></div></div>
+          <div class="swiper-slide"><div class="movie-poster"></div></div>
+          <div class="swiper-slide"><div class="movie-poster"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- MOVIE TOP -->
+</body>
+</html>
