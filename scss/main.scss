@@ -18,7 +18,7 @@ body {
       text-decoration: none;
   }
   .inner {
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
     position: relative;
   }
@@ -80,10 +80,10 @@ body {
       display: none;
       position: fixed;
       height: 100%;
-      width: calc(5% + 20em);
+      width: calc(10% + 20em);
       top: 0;
       bottom: 0;
-      right: calc(-1*(5% + 20em));
+      right: calc(-1*(10% + 20em));
       background-color: $bgColor;
       z-index: 8;
       .menu {
@@ -116,29 +116,26 @@ body {
   .review-top {
     margin-top: 150px;
     .swiper-container {
-      width: 80%;
+      width: 1200px;
       margin-top: 20px;
       overflow: hidden;
       .swiper-wrapper {
         .swiper-slide {
-          .movie-poster {
-            width: 120px;
-            height: 120px * $poster-ratio;
-            background-color: #565656;
-          }
-          $url: "../images";
-          @for $i from 1 to 11 {
-            &:nth-child(#{$i}) .movie-poster{
-              background-image: url(#{$url}/movie_poster#{$i}.jpg);
-              background-position: center;
-              background-size: cover;
+          .art-box {
+            width: 200px;
+            height: 200px * $poster-ratio;
+            // background-color: #565656;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+              width: 120px;
+              transition: .5s;
             }
           }
           &.swiper-slide-active {
-            .movie-poster{
-              width: 200px;
-              height: 200px * $poster-ratio;
-              transition: .3s;
+            .art-box img{
+              width: 150px;
             } 
           }
         }

@@ -18,7 +18,7 @@ menuBtnEl.addEventListener('click', function () {
 menuBGEl.addEventListener('click', function() {
   gsap.to(menuEl, .6, {
     display: 'none',
-    right: '-25em',
+    right: '-30em',
   })
   gsap.to(menuBGEl, .6, {
     display: 'none',
@@ -30,7 +30,7 @@ menuBGEl.addEventListener('click', function() {
 
 new Swiper('.review-top .swiper-container', {
   slidesPerView: 6,
-  // spaceBetween: 1,
+  // spaceBetween: 5,
   // centeredSlides: true,
-  //loop: true,
+  loop: true,
 });
