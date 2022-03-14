@@ -1,3 +1,5 @@
+const { default: Swiper } = require("swiper")
+
 const searchBtnEl = document.querySelector('.submenu .btn_search')
 const menuBtnEl = document.querySelector('.submenu .btn_menu')
 const menuEl = document.querySelector('header .main-menu')
@@ -30,7 +32,10 @@ menuBGEl.addEventListener('click', function() {
 
 new Swiper('.review-top .swiper-container', {
   slidesPerView: 6,
-  // spaceBetween: 5,
-  // centeredSlides: true,
   loop: true,
 });
+
+new Swiper('.movie-top .swiper-container', {
+  slidesPerView: 8,
+  loop: true,
+})

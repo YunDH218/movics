@@ -11,33 +11,51 @@ body {
   font-weight: 400;
   line-height: 1.4;
   color: $mainTextColor;
+
   img {
     display: block;
   }
+
   a {
-      text-decoration: none;
+    text-decoration: none;
   }
+
   .inner {
     width: 80%;
     margin: 0 auto;
     position: relative;
   }
+
   .title {
     width: fit-content;
+
     font: {
       size: 24px;
       weight: 700;
-    };
+    }
+
+    ;
     border-bottom: 2px solid #eee;
+  }
+
+  .more {
+    color: #055;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
   }
 
   /* HEADER */
   header {
     width: 100%;
     position: fixed;
+    background-color: $bgColor;
+    z-index: 9;
     top: 0;
+
     >.inner {
       height: 120px;
+
       .logo {
         position: absolute;
         height: 65px;
@@ -47,6 +65,7 @@ body {
         margin: auto;
         z-index: 9;
       }
+
       .submenu {
         position: absolute;
         height: 40px;
@@ -55,20 +74,26 @@ body {
         right: 0;
         margin: auto;
         z-index: 9;
+
         ul.menu {
           display: flex;
+
           li {
             margin-left: 15px;
+
             a {
               color: $mainTextColor;
+
               font: {
                 weight: 700;
                 size: 24px;
               }
+
               &:hover {
                 color: $activatedTextColor;
               }
             }
+
             &:nth-child(2) a {
               color: $activatedTextColor
             }
@@ -76,6 +101,7 @@ body {
         }
       }
     }
+
     .main-menu {
       display: none;
       position: fixed;
@@ -86,12 +112,15 @@ body {
       right: calc(-1*(10% + 20em));
       background-color: $bgColor;
       z-index: 8;
+
       .menu {
         position: absolute;
         top: 150px;
         left: 50px;
+
         .item {
           margin-bottom: 20px;
+
           a {
             color: $mainTextColor;
             font-size: 20px;
@@ -99,6 +128,7 @@ body {
         }
       }
     }
+
     .menu-background {
       display: none;
       position: fixed;
@@ -115,28 +145,62 @@ body {
   /* REVIEW TOP */
   .review-top {
     margin-top: 150px;
+    position: relative;
+    z-index: 1;
+
     .swiper-container {
       width: 1200px;
       margin-top: 20px;
       overflow: hidden;
+
       .swiper-wrapper {
         .swiper-slide {
           .art-box {
             width: 200px;
             height: 200px * $poster-ratio;
-            // background-color: #565656;
             display: flex;
             justify-content: center;
             align-items: center;
+
             img {
               width: 120px;
               transition: .5s;
             }
           }
+
           &.swiper-slide-active {
-            .art-box img{
+            .art-box img {
               width: 150px;
-            } 
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* MOVIE TOP */
+  .movie-top {
+    .swiper-container {
+      width: 1200px;
+      overflow: hidden;
+
+      .swiper-wrapper {
+        .swiper-slide {
+          .art-box {
+            width: 200px;
+            height: 200px * $poster-ratio;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+              width: 120px;
+              transition: .5s;
+
+              &:hover {
+                width: 150px;
+              }
+            }
           }
         }
       }
