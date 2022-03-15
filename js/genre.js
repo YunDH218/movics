@@ -1,6 +1,6 @@
 const { default: Swiper } = require("swiper")
 
-const searchBtnEl = document.querySelector('.submenu .btn_search')
+const genreBtnEl = document.querySelector('.submenu .btn_genre')
 const menuBtnEl = document.querySelector('.submenu .btn_menu')
 const menuEl = document.querySelector('header .main-menu')
 const menuBGEl = document.querySelector('header .menu-background')
@@ -15,7 +15,7 @@ menuBtnEl.addEventListener('click', function () {
     opacity: 1
   })
   menuBtnEl.setAttribute('style', 'color: #c00')
-  searchBtnEl.setAttribute('style', 'color: #eee')
+  genreBtnEl.setAttribute('style', 'color: #eee')
 })
 menuBGEl.addEventListener('click', function() {
   gsap.to(menuEl, .6, {
@@ -27,15 +27,25 @@ menuBGEl.addEventListener('click', function() {
     opacity: 0,
   })
   menuBtnEl.setAttribute('style', 'color: #eee')
-  searchBtnEl.setAttribute('style', 'color: #c00')
+  genreBtnEl.setAttribute('style', 'color: #c00')
 })
 
-new Swiper('.review-top .swiper-container', {
+new Swiper('.criticism-top .swiper-container', {
   slidesPerView: 6,
   loop: true,
 });
 
 new Swiper('.movie-top .swiper-container', {
+  slidesPerView: 8,
+  loop: true,
+})
+
+new Swiper('.recommendation-criticism .swiper-container', {
+  slidesPerView: 8,
+  loop: true,
+})
+
+new Swiper('.influencer-criticism .swiper-container', {
   slidesPerView: 8,
   loop: true,
 })
