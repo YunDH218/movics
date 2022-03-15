@@ -1,0 +1,253 @@
+$bgColor: #111;
+$subBgColor: #333;
+$mainTextColor: #eee;
+$activatedTextColor: #c00;
+$poster-ratio: (445/300);
+
+body {
+    /* COMMON */
+    background-color: $bgColor;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: $mainTextColor;
+
+    img {
+        display: block;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .inner {
+        width: 80%;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .title {
+        width: fit-content;
+
+        font: {
+            size: 24px;
+            weight: 700;
+        }
+
+        ;
+        border-bottom: 2px solid $mainTextColor;
+    }
+
+    .more {
+        color: $mainTextColor;
+        position: absolute;
+        right: 0;
+        bottom: 10px;
+    }
+
+    /* HEADER */
+    header {
+        width: 100%;
+        position: fixed;
+        background-color: $bgColor;
+        z-index: 9;
+        top: 0;
+
+        >.inner {
+            height: 120px;
+
+            .logo {
+                position: absolute;
+                height: 65px;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                margin: auto;
+                z-index: 9;
+            }
+
+            .submenu {
+                position: absolute;
+                height: 40px;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                margin: auto;
+                z-index: 9;
+
+                ul.menu {
+                    display: flex;
+
+                    li {
+                        margin-left: 15px;
+
+                        a {
+                            color: $mainTextColor;
+
+                            font: {
+                                weight: 700;
+                                size: 24px;
+                            }
+
+                            &:hover {
+                                color: $activatedTextColor;
+                            }
+                        }
+
+                        .btn_signin {
+                            color: $activatedTextColor
+                        }
+                    }
+                }
+            }
+        }
+
+        .main-menu {
+            display: none;
+            position: fixed;
+            height: 100%;
+            width: calc(10% + 20em);
+            top: 0;
+            bottom: 0;
+            right: -30em;
+            background-color: $bgColor;
+            z-index: 8;
+
+            .menu {
+                position: absolute;
+                top: 150px;
+                left: 50px;
+
+                .item {
+                    margin-bottom: 20px;
+
+                    a {
+                        color: $mainTextColor;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+
+        .menu-background {
+            display: none;
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            bottom: 0;
+            background-color: rgba($color: #eee, $alpha: 0.1);
+            opacity: 0;
+            z-index: 7;
+        }
+    }
+
+    .signin {
+        width: 100%;
+        margin-top: 120px;
+        background-color: $bgColor;
+        padding: 100px 0 150px;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        .signin__card {
+            width: 500px;
+            background-color: $subBgColor;
+            margin: 0 auto;
+            border-radius: 6px;
+
+            form {
+                padding: 30px 22px;
+
+                input {
+                    width: 100%;
+                    margin-bottom: 12px;
+                    box-sizing: border-box;
+                    font-size: 14px;
+                    padding: 15px;
+                    border: 1px solid $mainTextColor;
+                    border-radius: 4px;
+                    outline: none;
+
+                    &[type="submit"] {
+                        background-color: $activatedTextColor;
+                        color: $mainTextColor;
+                        font-size: 20px;
+                        cursor: pointer;
+                        border: none;
+                    }
+                }
+
+                p {
+                    color: $mainTextColor;
+                    font-size: 12px;
+                    text-align: center;
+                }
+            }
+
+            .actions {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-top: 1px solid $bgColor;
+
+                a {
+                    color: $mainTextColor;
+                    font-size: 14px;
+                    padding: 20px;
+                    text-align: center;
+                    border-right: 1px solid $bgColor;
+                    flex-grow: 1;
+                    flex-basis: 0;
+
+                    &:last-child {
+                        border-right: none;
+                    }
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+    }
+
+
+
+    /* FOOTER */
+    footer .menu {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+
+        li {
+            position: relative;
+
+            a {
+                display: block;
+                color: #ccc;
+                font-size: 12px;
+                font-weight: 700;
+                padding: 15px;
+            }
+
+            &::before {
+                content: "";
+                width: 3px;
+                height: 3px;
+                background-color: #555;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: -1px;
+                margin: auto;
+            }
+
+            &:last-child::before {
+                display: none;
+            }
+        }
+    }
+}
