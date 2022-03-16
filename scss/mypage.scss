@@ -1,0 +1,37 @@
+$bgColor: #111;
+$mainTextColor: #eee;
+
+body {
+  // COMMON
+  background-color: $bgColor;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: $mainTextColor;
+
+  img {
+    display: block;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .inner {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  header {
+    width: 100%;
+
+    >.inner {
+      height: 100px;
+
+      .logo {}
+    }
+  }
+}
+}
