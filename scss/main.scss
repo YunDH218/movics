@@ -55,6 +55,7 @@ body {
 
     >.inner {
       height: 120px;
+      background-color: $bgColor;
 
       .logo {
         position: absolute;
@@ -144,7 +145,6 @@ body {
 
   /* CRITICISM TOP */
   .criticism-top {
-    margin-top: 150px;
     position: relative;
     z-index: 1;
 

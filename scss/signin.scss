@@ -22,7 +22,7 @@ body {
     }
 
     .inner {
-        width: 80%;
+        width: 1200px;
         margin: 0 auto;
         position: relative;
     }
@@ -49,13 +49,14 @@ body {
     /* HEADER */
     header {
         width: 100%;
-        position: fixed;
+        position: sticky;
         background-color: $bgColor;
         z-index: 9;
         top: 0;
 
         >.inner {
             height: 120px;
+            background-color: $bgColor;
 
             .logo {
                 position: absolute;
@@ -145,7 +146,6 @@ body {
 
     .signin {
         width: 100%;
-        margin-top: 120px;
         background-color: $bgColor;
         padding: 100px 0 150px;
         background-repeat: no-repeat;
