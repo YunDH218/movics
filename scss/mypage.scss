@@ -30,8 +30,14 @@ body {
     >.inner {
       height: 100px;
 
-      .logo {}
+      .logo img {
+        position: absolute;
+        width: 150px;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
     }
   }
-}
 }
