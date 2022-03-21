@@ -19,16 +19,50 @@ body {
   }
 
   .inner {
-    width: 80%;
+    width: 1200px;
     margin: 0 auto;
     position: relative;
   }
 
+  .btn-group {
+    width: 1000px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .btn.btn--gray {
+    width: 200px;
+    margin: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: #555;
+    color: $bgColor;
+
+    &:hover {
+      color: $mainTextColor;
+    }
+
+    &.active {
+      color: $mainTextColor;
+    }
+  }
+
+  /* HEADER */
   header {
     width: 100%;
+    position: relative;
+    top: 0;
+    background-color: $bgColor;
 
-    >.inner {
+    .top {
       height: 100px;
+      width: 1200px;
+      margin: 0 auto;
+      position: relative;
 
       .logo img {
         position: absolute;
@@ -38,6 +72,62 @@ body {
         bottom: 0;
         margin: auto;
       }
+
+      .sub-logo {
+        position: absolute;
+        left: 160px;
+        top: 48px;
+        font-size: 20px;
+        color: $mainTextColor;
+      }
+    }
+  }
+
+  /* PROFILE */
+  .profile {
+    $profile-size: 100px;
+    text-align: center;
+
+    .profile-image {
+      width: $profile-size;
+      height: $profile-size;
+      position: relative;
+      margin: 100px auto 15px;
+      border-radius: $profile-size / 2;
+      background-color: #fff;
+      overflow: hidden;
+      box-sizing: border-box;
+
+      img {
+        width: $profile-size * 0.8;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+    }
+
+    .profile-name {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .profile-description {
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+
+  /* CONTAINER */
+  .container {
+    margin-top: 50px;
+
+    .content {
+      width: 100%;
+      min-height: 500px;
+      background-color: #fff;
     }
   }
 }
