@@ -27,23 +27,25 @@ body {
   .btn-group {
     width: 1000px;
     display: flex;
-    margin: 0 auto;
+    margin: 0 auto 20px;
     justify-content: center;
   }
 
-  .btn.btn--gray {
-    width: 200px;
-    margin: 5px;
-    padding: 5px;
-    box-sizing: border-box;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 700;
-    background-color: #555;
-    color: $bgColor;
+  .btn {
+    &.btn--gray {
+      width: 200px;
+      margin: 5px;
+      padding: 5px;
+      box-sizing: border-box;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 700;
+      background-color: #555;
+      color: $bgColor;
 
-    &:hover {
-      color: $mainTextColor;
+      &:hover {
+        color: $mainTextColor;
+      }
     }
 
     &.active {
@@ -125,9 +127,10 @@ body {
     margin-top: 50px;
 
     .content {
-      width: 100%;
-      min-height: 500px;
-      background-color: #fff;
+      background-color: #333;
+      min-height: 200px;
+      padding: 20px;
+      display: none;
     }
   }
 }
