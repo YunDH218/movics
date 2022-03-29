@@ -158,4 +158,18 @@ body {
       }
     }
   }
+
+  /* BANNER */
+  .banner {
+    margin-top: 50px;
+
+    .img-box {
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 80%;
+      }
+    }
+  }
 }
