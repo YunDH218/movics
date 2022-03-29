@@ -1,0 +1,161 @@
+$bgColor: #111;
+$mainTextColor: #eee;
+
+body {
+  // COMMON
+  background-color: $bgColor;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: $mainTextColor;
+
+  img {
+    display: block;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .inner {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  /* HEADER */
+  header {
+    width: 100%;
+    position: relative;
+    top: 0;
+    background-color: $bgColor;
+
+    .top {
+      height: 100px;
+      width: 1200px;
+      margin: 0 auto;
+      position: relative;
+
+      .logo img {
+        position: absolute;
+        width: 150px;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+    }
+  }
+
+  /* MOVIE INFO */
+  .movie-info {
+    >.inner {
+      background-color: #eee;
+
+      .container {
+        height: 260px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .movie-poster {
+          width: 400px;
+          box-sizing: border-box;
+
+          img {
+            width: 150px;
+            margin: auto;
+          }
+        }
+
+        .general {
+          color: $bgColor;
+          position: relative;
+          width: 400px;
+          height: 260px;
+          padding: 30px;
+          box-sizing: border-box;
+
+          .description {
+            height: 100%;
+            margin-top: 10px;
+
+            overflow-y: auto;
+          }
+        }
+
+        .response {
+          color: $bgColor;
+          width: 400px;
+          height: 260px;
+
+          .like {
+            display: flex;
+            position: relative;
+            width: 200px;
+            margin-top: 100px;
+
+            .rate {
+              min-width: 10px;
+              height: 100%;
+              background-color: #88f;
+              position: absolute;
+              left: 5em;
+            }
+          }
+
+          .dislike {
+            display: flex;
+            position: relative;
+            width: 200px;
+            margin-top: 10px;
+
+            .rate {
+              min-width: 10px;
+              height: 100%;
+              background-color: #f88;
+              position: absolute;
+              left: 5em;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* REVIEWS */
+  .reviews {
+    color: $mainTextColor;
+
+    .review {
+      border-bottom: solid 1px #666;
+
+      .user-name {
+        margin: 20px 0 10px;
+      }
+
+      .content {
+        margin-left: 10px;
+        margin-bottom: 20px;
+        max-height: 100px;
+        overflow-y: auto;
+      }
+    }
+  }
+}
