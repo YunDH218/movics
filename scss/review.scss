@@ -1,0 +1,143 @@
+$bgColor: #111;
+$mainTextColor: #eee;
+
+body {
+  // COMMON
+  background-color: $bgColor;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: $mainTextColor;
+
+  img {
+    display: block;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .inner {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  /* HEADER */
+  header {
+    width: 100%;
+    position: relative;
+    top: 0;
+    background-color: $bgColor;
+
+    .top {
+      height: 100px;
+      width: 1200px;
+      margin: 0 auto;
+      position: relative;
+
+      .logo img {
+        position: absolute;
+        width: 150px;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+    }
+  }
+
+  /* CRITIC INFO */
+  .criticism {
+    .container {
+      height: 260px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .movie-poster {
+        width: 400px;
+        box-sizing: border-box;
+
+        img {
+          width: 150px;
+          margin: auto;
+        }
+      }
+
+      .counts {
+        color: $mainTextColor;
+        position: relative;
+        width: 400px;
+        height: 260px;
+        padding: 30px;
+        box-sizing: border-box;
+
+        .views {
+          margin-top: 20px;
+          display: flex;
+
+          .views-count {
+            margin-left: 20px;
+          }
+        }
+
+        .likes {
+          margin-top: 10px;
+          display: flex;
+
+          .likes-count {
+            margin-left: 20px;
+          }
+        }
+      }
+
+      .banner {}
+    }
+  }
+
+  /* REVIEWS */
+  .review {
+    color: $bgColor;
+
+    >.inner {
+      background-color: $mainTextColor;
+      padding: 20px;
+
+      .content {
+        margin-top: 10px;
+        min-height: 200px;
+      }
+    }
+  }
+
+  /* BANNER */
+  .banner {
+    margin-top: 50px;
+
+    .img-box {
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 80%;
+      }
+    }
+  }
+}
